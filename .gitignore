@@ -1,0 +1,32 @@
+.cache/
+
+*.obj
+*.os
+*.o
+
+compile_commands.json
+
+.sconsign.dblite
+
+project/bin
+
+*.pdb
+
+.vscode/
+
+project/
+
+# Cmake
+build/
+
+# scons
+bin/
+
+__pycache__/
+.godot/
+gen/
+
+*.log
+
+demo/addons/godot_dragon_bones.daylily-zeleen/LICENSE
+demo/addons/godot_dragon_bones.daylily-zeleen/README.*

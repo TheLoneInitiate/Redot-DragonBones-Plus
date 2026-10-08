@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://ck5fr5ycffe8j"]
+
+[ext_resource type="Script" uid="uid://dgfk7df6h4vvw" path="res://scripts/DragonBonesDemo.gd" id="1_e228u"]
+[ext_resource type="Texture2D" uid="uid://dpxi3t61yhb80" path="res://icon.svg" id="2_spdx3"]
+
+[sub_resource type="DragonBonesFactory" id="DragonBonesFactory_yjvju"]
+dragon_bones_ske_file_list = PackedStringArray("res://assets/player/Female2_ske.json")
+texture_atlas_json_file_list = PackedStringArray("res://assets/player/Female2_tex.json")
+
+[node name="DragonBonesDemo" type="Node2D"]
+script = ExtResource("1_e228u")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.275, 0.275)
+
+[node name="DragonBonesArmatureView" type="DragonBonesArmatureView" parent="."]
+factory = SubResource("DragonBonesFactory_yjvju")
+instantiate_dragon_bones_data_name = "Female2"
+instantiate_armature_name = "Armature"
+instantiate_skin_name = "default"
+armature_settings = {
+&"current_animation": "[none]",
+"sub_armatures": {}
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_spdx3")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -1864.0
+offset_top = -759.0
+offset_right = -548.0
+offset_bottom = -80.0
+theme_override_font_sizes/font_size = 72
+text = "Left Shift to sprint
+Mouse1 to attack
+F Key to test flinch anim blending
+
+1,2,3,4,5 to test equipment swapping"

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+echo $1 $2
+
+xcodebuild -create-xcframework \
+-library ./bin/libgddragonbones.ios.$1.a \
+-library ./bin/libgddragonbones.ios.$1.simulator.a \
+-output ./demo/addons/godot_dragon_bones.daylily-zeleen/bin/libgddragonbones.ios.$1.xcframework
+
+xcodebuild -create-xcframework \
+-library ./thirdparty/godot-cpp/bin/libgodot-cpp.ios.$1.arm64.a \
+-library ./thirdparty/godot-cpp/bin/libgodot-cpp.ios.$1.universal.simulator.a \
+-output ./demo/addons/godot_dragon_bones.daylily-zeleen/bin/libgodot-cpp.ios.$1.xcframework
