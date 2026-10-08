@@ -1,6 +1,6 @@
-# Godot DragonBones Plus
+# Rdot DragonBones Plus
 
-A Godot 4 GDExtension for DragonBones, Improved fork by TheLoneInitiate
+A Redot GDExtension for DragonBones, Improved fork by TheLoneInitiate
 
 This fork adds layered animation blending, per-clip speed, bone overrides, IK weight control, and a completion signal. Those calls are documented in [API.md](api.md).
 
